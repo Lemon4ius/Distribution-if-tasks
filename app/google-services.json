@@ -1,0 +1,48 @@
+
+{
+  "project_info": {
+    "project_number": "413559997326",
+    "project_id": "distribution-of-tasks-99b1d",
+    "storage_bucket": "distribution-of-tasks-99b1d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413559997326:android:50cd311bf7d97d49d99adf",
+        "android_client_info": {
+          "package_name": "com.example.distributionoftasks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413559997326-u6ltoobq1bvqh263tt6jgua8cqq5ulk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.distributionoftasks",
+            "certificate_hash": "a023c039875ce992064afb7eb5687860dcf1fe70"
+          }
+        },
+        {
+          "client_id": "413559997326-qlfsemh8fdnuvtfbvc6npgc1durr8d8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUSSJfbEaRyFpHHR2gGav8kKdhb1vIgGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413559997326-qlfsemh8fdnuvtfbvc6npgc1durr8d8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

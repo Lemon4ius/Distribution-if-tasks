@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up" translatable="false">Войти через google</string>
+    <string name="login" translatable="false">Вход</string>
+    <string name="registration" translatable="false">Регистрация</string>
+    <string name="add">Добавить</string>
+    <string name="choose">You have to choose who you areYou have to choose who you are</string>
+    <string name="enter">enter</string>
+    <string name="exit">Exit</string>
+</resources>

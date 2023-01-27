@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RelativeLayout
+            android:layout_width="187dp"
+            android:layout_height="139dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:id="@+id/mailPrf"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_above="@+id/exit"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="21dp"
+                android:text="Mail"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/namePtf"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:text="Name"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="#E63D3D"
+                android:onClick="ExitInApp"
+                android:text="@string/exit" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iconPrf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dog" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/cardView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#FFFFFF"
+            android:onClick="opnAddingView"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_add_circle_24" />
+
+        <ImageButton
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:background="#FFFFFF"
+            android:onClick="opnProfileView"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_outline_people_alt_24" />
+
+        <ImageButton
+
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="#FFFFFF"
+            android:onClick="opnMainView"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_outline_home_24" />
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
