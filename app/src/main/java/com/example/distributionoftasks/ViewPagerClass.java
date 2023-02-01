@@ -13,7 +13,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ViewPagerClass extends AppCompatActivity {
-    List<Integer> list = Arrays.asList(R.drawable.ic_outline_home_24, R.drawable.ic_baseline_person_add_alt_24, R.drawable.plus, R.drawable.ic_outline_people_alt_24);
+    List<Integer> list = Arrays.asList(R.drawable.ic_outline_home_24, R.drawable.ic_baseline_person_add_alt_24, R.drawable.plus, R.drawable.ic_outline_people_alt_24, R.drawable.baseline_manage_accounts_24);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

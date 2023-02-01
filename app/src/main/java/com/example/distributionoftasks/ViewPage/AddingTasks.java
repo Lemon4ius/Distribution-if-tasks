@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.annotation.NonNull;
@@ -17,17 +18,18 @@ import com.example.distributionoftasks.R;
 import com.example.distributionoftasks.ShowPopUp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
-public class AddingTasks extends Fragment {
+public class AddingTasks extends Fragment implements View.OnClickListener {
 
      EditText Title, Discription;
     public AddingTasks() {
-        // Required empty public constructor
+
     }
 
 
@@ -42,26 +44,36 @@ public class AddingTasks extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-    }
-    public void addingInDb(View view) {
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser firebaseUser = mAuth.getCurrentUser();
+        Button AddInDB = view.findViewById(R.id.adding);
+        AddInDB.setOnClickListener(this);
         Title = view.findViewById(R.id.titleAdd);
         Discription = view.findViewById(R.id.discriptionAdd);
-        Map<String, Object> user = new HashMap<>();
-        user.put("tit", Title.getText().toString());
-        user.put("dis", Discription.getText().toString());
 
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
+    }
+    public void addingInDb(View view) {
 
-        db.collection("users")
-                .document(firebaseUser.getUid())
-                .collection("tasks")
-                .add(user)
-                .addOnSuccessListener(documentReference -> Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference))
-                .addOnFailureListener(e -> Log.w(TAG, "Error adding document", e));
 
 
         ShowPopUp.showPopupWindow(view);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.adding:
+                Map<String, Object> tasks = new HashMap<>();
+                tasks.put("tit", Title.getText().toString());
+                tasks.put("dis", Discription.getText().toString());
+
+                FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+                db.collection("tasks")
+                        .document(Title.getText().toString())
+                        .set(tasks)
+                        .addOnSuccessListener(documentReference -> Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference))
+                        .addOnFailureListener(e -> Log.w(TAG, "Error adding document", e));
+
+                break;
+        }
     }
 }

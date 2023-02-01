@@ -37,8 +37,10 @@ public class AddingTasks extends AppCompatActivity {
     public void addingInDb(View view) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
         Title = findViewById(R.id.titleAdd);
         Discription = findViewById(R.id.discriptionAdd);
+
         Map<String, Object> user = new HashMap<>();
         user.put("tit", Title.getText().toString());
         user.put("dis", Discription.getText().toString());
@@ -56,21 +58,4 @@ public class AddingTasks extends AppCompatActivity {
         ShowPopUp.showPopupWindow(view);
     }
 
-
-
-
-    public void opnAddingView(View view) {
-        Intent intent = new Intent(this, AddingTasks.class);
-        startActivity(intent);
-    }
-
-    public void opnProfileView(View view) {
-        Intent intent = new Intent(this, Profile.class);
-        startActivity(intent);
-    }
-
-    public void opnMainView(View view) {
-        Intent intent = new Intent(this, MainMenu.class);
-        startActivity(intent);
-    }
 }

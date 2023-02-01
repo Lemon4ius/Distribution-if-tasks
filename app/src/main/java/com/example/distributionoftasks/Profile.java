@@ -19,7 +19,7 @@ public class Profile extends AppCompatActivity {
 
 
     FirebaseUser user;
-    View view, getView;
+
     TextView Name, Mail;
     ImageView ProfIcon;
 

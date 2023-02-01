@@ -18,6 +18,7 @@ public class AdapterFragment extends FragmentStateAdapter  {
         fragment.add(new MainMenu());
         fragment.add(new CreaterUsers());
         fragment.add(new AddingTasks());
+        fragment.add(new AllAddingUsers());
         fragment.add(new Profile());
     }
 
@@ -30,7 +31,7 @@ public class AdapterFragment extends FragmentStateAdapter  {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 5;
     }
 
 }

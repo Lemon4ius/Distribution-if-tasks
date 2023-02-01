@@ -71,12 +71,8 @@ public class SignUp extends AppCompatActivity {
             View view = findViewById(R.id.sing_up_view);
             ShowPopUp.showPopupWindow(view);
 
-            com.example.distributionoftasks.ViewPage.MainMenu mainMenu=new com.example.distributionoftasks.ViewPage.MainMenu();
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.sing_up_view, mainMenu)
-                    .addToBackStack(com.example.distributionoftasks.ViewPage.MainMenu.class.getSimpleName())
-                    .commit();
-            // ...
+            Intent intent = new Intent(this, ViewPagerClass.class);
+            startActivity(intent);
         } else {
             // Sign in failed. If response is null the user canceled the
             // sign-in flow using the back button. Otherwise check
